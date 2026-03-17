@@ -56,6 +56,14 @@ periodic-table-app/
 - **App name**: Change `productName` in the `"build"` section of `package.json`
 - **DevTools**: Uncomment the `openDevTools()` line in `main.js` for debugging
 
+## Author
+
+- **jhstephenson**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Tips
 
 - Press `Ctrl+Shift+I` in the running app to open DevTools manually
