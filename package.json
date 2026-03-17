@@ -1,0 +1,53 @@
+{
+  "name": "periodic-table",
+  "version": "1.0.0",
+  "description": "Interactive Periodic Table Desktop App",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run predev && electron .",
+    "vite:dev": "vite",
+    "build": "vite build",
+    "package": "rimraf release && vite build && electron-builder",
+    "start": "electron .",
+    "predev": "kill-port 5173",
+    "test": "vitest"
+  },
+  "build": {
+    "appId": "com.periodic-table.app",
+    "productName": "Periodic Table",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3",
+    "jsdom": "^29.0.0",
+    "kill-port": "^2.0.1",
+    "rimraf": "^6.1.3",
+    "vite": "^5.4.2",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0"
+  }
+}
